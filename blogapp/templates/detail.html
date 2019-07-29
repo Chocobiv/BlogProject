@@ -2,14 +2,21 @@
 <!-- extends는 우선순위가 높다, 가장 먼저 써주면 됨-->
 <!-- 이 부분이 base.html에서 말한 contents 임을 알려줘야 함-->
 {% block contents %}
+
 <body>
     <br>
-    <div class="container">
-        <br>
-        <br><br>
-        <h1>{{blog.title}}</h1>
-        <p>{{blog.pub_date}}</p>
-        <p>{{blog.body}}</p>
-    </div>
+    <center>
+        <div style="padding: 20px;margin-top: 30px;background-color: white;width: 1050px;height:450px;border-radius: 25px;">
+            <br>
+            <br><br>
+            <h1>{{blog.title}}</h1>
+            <p>{{blog.pub_date}}</p>
+            <p>{{blog.body}}</p>
+            <br>
+            <br>
+            <p style="font-weight: bold;">Writer: {{blog.writer}}</p>
+            <p style="font-weight: bold;">Email: {{blog.email}}</p>
+        </div>
+    </center>
 </body>
 {% endblock %}

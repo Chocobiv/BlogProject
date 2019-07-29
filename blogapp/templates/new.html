@@ -20,15 +20,23 @@
     </div>
 </body>
 -->
+
 <br>
-<div class = "container">
-    <form method="POST">
-        {% csrf_token %}
-        <table>
-            {{form.as_table}}
-        </table>
-        <br>
-        <input class="btn btn-dark" type="submit" value="제출하기">
-    </form>
-</div>
+<center>
+    <div style="background-color: rgba(255, 255, 255, 0.7);height: 60px;">
+        <p style="font-size: 32px;font-weight: bold;">Blogging</p>
+    </div>
+</center>
+<center>
+    <div class="container" style="padding: 15px;margin-top: 40px;background-color: white;width: 650px;border-radius: 25px;">
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <br>
+            <input class="btn btn-dark" type="submit" value="글쓰기">
+        </form>
+    </div>
+</center>
 {% endblock %}
